@@ -1,4 +1,5 @@
 from flask import Flask # импортируем из библиотеки flask класс Flask
+import request, render_template
 
 app = Flask(__name__)  # создаем объект app на основе класса Flask, (__name__) - имя нашего файла
 
@@ -49,6 +50,10 @@ def add_user_list(username):
     else:
         return f'User {username} added'
 
+# для возврата страницы хтмл return render_template("page_name.html")
+@app.route("/addusr", methods=["POST", "GET"])
+def addusr():
+    if request
 
 
 
